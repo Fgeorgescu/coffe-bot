@@ -4,7 +4,7 @@ const coffeHandler = require("./handlers/coffe")
 // Load .env
 result = require('dotenv').config()
 if (result.error) {
-    throw result.error
+    console.warn("Could not load .env variables. This might happen when not working locally")
 }
   
 const client = new Discord.Client();
