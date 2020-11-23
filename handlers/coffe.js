@@ -16,7 +16,7 @@ const EMBEBED_COFFE_RECOMENDATIONS = {
 
 
 exports.handle = (message) => {
-    console.log(`Coffe requested by ${message.author} in ${message.guild.name}`)
+    console.log(`Coffe requested by ${message.author.username} in ${message.guild.name}`)
     
     channelCandidate = message.guild.channels.cache.find(
         (channelData, channelId) => {
