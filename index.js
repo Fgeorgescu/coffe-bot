@@ -14,7 +14,6 @@ client.login(process.env.BOT_TOKEN);
 
 const COMMAND_PREFIX = "rp "; //Incluye el espacio
 
-console.log("Bot token: " + process.env.BOT_TOKEN)
 client.on("message", function(message) {
     // Descartamos los mensajes que no sean de un bot.
     if (message.author.bot) return;
