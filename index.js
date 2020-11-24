@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const coffeHandler = require("./handlers/coffe")
+const coffeeHandler = require("./handlers/coffee")
 
 // Load .env
 result = require('dotenv').config()
@@ -14,6 +14,8 @@ client.login(process.env.BOT_TOKEN);
 
 const COMMAND_PREFIX = "rp "; //Incluye el espacio
 
+
+console.log("RP bot is online")
 client.on("message", function(message) {
     // Descartamos los mensajes que no sean de un bot.
     if (message.author.bot) return;
@@ -30,8 +32,8 @@ client.on("message", function(message) {
             const timeTaken = Date.now() - message.createdTimestamp;
             message.reply(`Pong! This message had a latency of ${timeTaken}ms.`);
             break;
-        case "coffe":
-            coffeHandler.handle(message)
+        case "coffee":
+            coffeeHandler.handle(message)
             break;
         default:
             message.channel.send(`No se que significa ${command}, el comando no está implementado.`)

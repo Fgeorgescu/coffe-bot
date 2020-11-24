@@ -1,7 +1,7 @@
-const COFFE_CANDIDATE_PREFIX = "Sala";
+const COFFEE_CANDIDATE_PREFIX = "Sala";
 
 
-const EMBEBED_COFFE_RECOMENDATIONS = {
+const EMBEBED_COFFEE_RECOMENDATIONS = {
     "title": "Recomendaciones",
     "description": "La idea es tener un rato para que podamos distendernos. \
         Para eso, tengamos en cuenta los siguientes puntos. \
@@ -16,16 +16,16 @@ const EMBEBED_COFFE_RECOMENDATIONS = {
 
 
 exports.handle = (message) => {
-    console.log(`Coffe requested by ${message.author.username} in ${message.guild.name}`)
+    console.log(`Coffee requested by ${message.author.username} in ${message.guild.name}`)
     
     channelCandidate = message.guild.channels.cache.find(
         (channelData, channelId) => {
-            return (channelData.type == "voice" && channelData.name.startsWith(COFFE_CANDIDATE_PREFIX) && channelData.members.size === 0);
+            return (channelData.type == "voice" && channelData.name.startsWith(COFFEE_CANDIDATE_PREFIX) && channelData.members.size === 0);
         }
     )
     
     var channelRecomendation = channelCandidate ? `Quienes quieran pueden sumarse en ${channelCandidate}` : `No encontré una sala vacía, pero siempre pueden crear otra o usar General`
     
-    message.channel.send({ content: `Buenas @here! ${message.author} tiene ganas de tomar un cafe ☕️. ${channelRecomendation}`, embed: EMBEBED_COFFE_RECOMENDATIONS }) 
+    message.channel.send({ content: `Buenas @here! ${message.author} tiene ganas de tomar un cafe ☕️. ${channelRecomendation}`, embed: EMBEBED_COFFEE_RECOMENDATIONS }) 
 }
 
