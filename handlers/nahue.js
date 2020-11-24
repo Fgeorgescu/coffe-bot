@@ -1,12 +1,12 @@
 const EMBEBED_RUBY = {
     "image": {
-        "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+        "url": "../assets/ruby"
     },
-    "color": C50925
+    "color": 13046058
 }
 
 
 exports.handle = (message) => {
-    message.channel.send({ content: `¿Qué opinas de ruby?`, embed: EMBEBED_RUBY }) 
+    message.channel.send({ content: `¿Qué opinas de ruby?`, files: ["./assets/ruby.png"] }) 
 }
 

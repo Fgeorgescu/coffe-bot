@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const coffeeHandler = require("./handlers/coffee")
+const nahueHandler = require("./handlers/nahue")
 
 // Load .env
 result = require('dotenv').config()
@@ -44,6 +45,11 @@ client.on("message", function(message) {
         case "mat damon":
         case "matarazzo":
             message.channel.send(`No rompas las bolas ${message.author}. Pedí un feca que es lo mismo. Nahue debe estar tomando unos ahora, decile que se sume`)
+            break;
+        case "nahue":
+        case "nahuel":
+        case "ruby":
+            nahueHandler.handle(message)
             break;
         default:
             message.channel.send(`No se que significa ${command}, el comando no está implementado.`)
