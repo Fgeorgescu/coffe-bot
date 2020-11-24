@@ -33,8 +33,16 @@ client.on("message", function(message) {
             message.reply(`Pong! This message had a latency of ${timeTaken}ms.`);
             break;
         case "coffee":
+        case "feca":
+        case "cafe":
             coffeeHandler.handle(message)
             break;
+        case "mate":
+        case "leo mattioli":
+        case "verdes":
+        case "mat damon":
+        case "matarazzo":
+            message.channel.send(`No rompas las bolas ${message.author}. Pedí un feca que es lo mismo.`)
         default:
             message.channel.send(`No se que significa ${command}, el comando no está implementado.`)
             break;
