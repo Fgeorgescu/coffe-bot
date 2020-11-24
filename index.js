@@ -38,11 +38,13 @@ client.on("message", function(message) {
             coffeeHandler.handle(message)
             break;
         case "mate":
+        case "mates":
         case "leo mattioli":
         case "verdes":
         case "mat damon":
         case "matarazzo":
-            message.channel.send(`No rompas las bolas ${message.author}. Pedí un feca que es lo mismo.`)
+            message.channel.send(`No rompas las bolas ${message.author}. Pedí un feca que es lo mismo. Nahue debe estar tomando unos ahora, decile que se sume`)
+            break;
         default:
             message.channel.send(`No se que significa ${command}, el comando no está implementado.`)
             break;
