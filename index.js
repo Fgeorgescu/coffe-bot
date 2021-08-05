@@ -78,7 +78,7 @@ var http = require('http'); //importing http
 function startKeepAlive() {
     setInterval(function() {
         var options = {
-            host: 'your_app_name.herokuapp.com',
+            host: 'bijatron.herokuapp.com',
             port: 80,
             path: '/'
         };
