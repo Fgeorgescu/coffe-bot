@@ -26,6 +26,7 @@ client.on("message", function(message) {
     // Descartamos los mensajes que no comienzan con el prefijo que queremos.
     if (message.content.toLowerCase().includes("quiere")) {
         nahueHandler.handle(message)
+        return;
     } else if (!message.content.startsWith(COMMAND_PREFIX)) return;
 
     // Eliminamos el prefijo, separamos el comando y los argumentos.
