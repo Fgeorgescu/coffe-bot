@@ -2,6 +2,10 @@ const Discord = require("discord.js");
 const coffeeHandler = require("./handlers/coffee")
 const nahueHandler = require("./handlers/nahue")
 
+var express  = require('express')
+var app  = express()
+app.listen(process.env.PORT || 8080)
+
 // Load .env
 result = require('dotenv').config()
 if (result.error) {
