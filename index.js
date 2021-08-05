@@ -21,7 +21,9 @@ client.on("message", function(message) {
     // Descartamos los mensajes que no sean de un bot.
     if (message.author.bot) return;
     // Descartamos los mensajes que no comienzan con el prefijo que queremos.
-    if (!message.content.startsWith(COMMAND_PREFIX)) return;
+    if (message.content.toLowerCase.includes("quiere")) {
+        nahueHandler.handle(message)
+    } else if (!message.content.startsWith(COMMAND_PREFIX)) return;
 
     // Eliminamos el prefijo, separamos el comando y los argumentos.
     const commandBody = message.content.slice(COMMAND_PREFIX.length);

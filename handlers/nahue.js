@@ -1,12 +1,12 @@
 const EMBEBED_RUBY = {
     "image": {
-        "url": "../assets/ruby"
+        "url": "../assets/bija"
     },
     "color": 13046058
 }
 
 
 exports.handle = (message) => {
-    message.channel.send({ content: `¿Qué opinas de ruby?`, files: ["./assets/ruby.png"] }) 
+    message.channel.send({ content: `Vos ves al pibe ese?`, files: ["./assets/bija.jpeg"] }) 
 }
 
