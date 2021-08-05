@@ -21,10 +21,10 @@ client.on("message", function(message) {
     // Descartamos los mensajes que no sean de un bot.
     if (message.author.bot) return;
 
-    console.log(message.content.toLowerCase)
-    
+    console.log(message.content.toLowerCase())
+
     // Descartamos los mensajes que no comienzan con el prefijo que queremos.
-    if (message.content.toLowerCase.includes("quiere")) {
+    if (message.content.toLowerCase().includes("quiere")) {
         nahueHandler.handle(message)
     } else if (!message.content.startsWith(COMMAND_PREFIX)) return;
 
