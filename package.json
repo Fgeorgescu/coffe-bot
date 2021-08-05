@@ -14,7 +14,6 @@
   "author": "Franco Georgescu",
   "license": "ISC",
   "dependencies": {
-    "express":"*",
     "discord.js": "^12.4.1",
     "dotenv": "^8.2.0"
   }
