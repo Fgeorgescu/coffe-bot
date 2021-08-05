@@ -32,7 +32,9 @@ client.on("message", function(message) {
 
     // Descartamos los mensajes que no comienzan con el prefijo que queremos.
     if (message.content.toLowerCase().includes("quiere")|| message.content.toLowerCase().includes("bija")) {
-        nahueHandler.handle(message)
+        const members = message.channel.guild.members
+        console.log(members)
+        nahueHandler.handle(message, members[Math.floor(Math.random()*members.length)])
         return;
     } else if (!message.content.startsWith(COMMAND_PREFIX)) return;
 
