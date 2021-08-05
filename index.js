@@ -76,6 +76,7 @@ client.on("message", function(message) {
 var http = require('http'); //importing http
 
 function startKeepAlive() {
+    console.log("start keepalive")
     setInterval(function() {
         var options = {
             host: 'bijatron.herokuapp.com',
@@ -94,7 +95,7 @@ function startKeepAlive() {
         }).on('error', function(err) {
             console.log("Error: " + err.message);
         });
-    }, 20 * 60 * 1000); // load every 20 minutes
+    }, 20 * 1000); // load every 20 minutes
 }
 
 startKeepAlive();
